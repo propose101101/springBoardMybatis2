@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mariadb://127.0.0.1:3306/board?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: propose98!!
+    driver-class-name: org.mariadb.jdbc.Driver
+
+# mybatis
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:mybatis-config.xml

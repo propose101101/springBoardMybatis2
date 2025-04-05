@@ -1,0 +1,20 @@
+<th:block th:replace="header :: header"></th:block>
+<table>
+  <tr>
+    <th>번호</th>
+    <th>제목</th>
+    <th>작성자</th>
+    <th>작성시간</th>
+    <th>조회수</th>
+  </tr>
+  <tr th:each="board : ${boardList}">
+    <td th:text="${board.id}"></td>
+    <td>
+      <a th:href="@{/view/{id}(id=${board.id})}" th:text="${board.boardTitle}"></a>
+    </td>
+    <td th:text="${board.boardWriter}"></td>
+    <td th:text="${board.createdAt}"></td>
+    <td th:text="${board.boardHits}"></td>
+  </tr>
+</table>
+<th:block th:replace="footer :: footer"></th:block>
